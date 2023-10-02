@@ -1,0 +1,11 @@
+*{
+  box-sizing: border-box;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+body{
+  display:flex;
+  align-items:center;
+  justify-content: space-evenly;
+}
