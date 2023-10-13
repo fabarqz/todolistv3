@@ -4,46 +4,98 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/style.css" />
+    <script
+      src="https://kit.fontawesome.com/d6b812cea0.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="scripts/script.js"></script>
     <title>Yet Another To Do List App</title>
   </head>
   <body>
-    <div class="wrapper">
-      <div class="app container">
-        <div class="input container">
-          <form action="" class="input form" id="inputForm">
-            <label for="taskID">Task Number:</label>
-            <input
-              type="text"
-              name="taskID"
-              id=""
-              class="taskID"
-              readonly
-              value=""
-            />
-            <label for="taskText">Task:</label>
-            <input
-              type="text"
-              name="taskText"
-              id=""
-              class="taskText"
-              placeholder="Insert Task Here"
-            />
-            <br />
-            <label for="dateStart">Start Date</label>
-            <input
-              type="datetime-local"
-              class="dateStart"
-              name="dateStart"
-              id=""
-            />
-            <label for="dateEnd">End Date</label>
-            <input type="datetime-local" class="dateEnd" name="dateEnd" id="" />
-            <button class="increment">Submit</button>
-          </form>
+    <nav>
+      <div class="nav-center">
+        <div class="nav-header">
+          <i class="fa-solid fa-list-check"></i>
         </div>
-        <div class="output container" id="outputContainer"></div>
+        <h4>Yet Another To-do-list</h4>
       </div>
-      <script src="scripts/todo.js"></script>
-    </div>
+    </nav>
+    <main>
+      <div class="appcontainer">
+        <div class="input-container">
+          <form action="" class="input-form" id="inputForm">
+              <section>
+                <label for="taskID">Task Number:</label>
+                <input
+                  type="text"
+                  name="taskID"
+                  id=""
+                  class="taskID"
+                  size="8"
+                  readonly
+                  value="TN202300000"
+                />
+                <label for="taskText">Task Description:</label>
+                <input
+                  type="text"
+                  name="taskText"
+                  id=""
+                  class="taskText"
+                  size="45"
+                  placeholder="Insert Task Here"
+                />
+              </section>
+              <section>
+                <label for="dateStart">Start Date: </label>
+                <input
+                  type="datetime-local"
+                  class="dateStart"
+                  name="dateStart"
+                  id=""
+                />
+                <label for="dateEnd">End Date: </label>
+                <input
+                  type="datetime-local"
+                  class="dateEnd"
+                  name="dateEnd"
+                  id=""
+                />
+              </section>
+              <section>
+                <label for="taskProgress">Task Progress: </label>
+                <input
+                  type="radio"
+                  name="taskProgress"
+                  id="ongoing"
+                  value="ongoing"
+                  checked
+                />
+                <label for="ongoing">Ongoing</label>
+                <input
+                  type="radio"
+                  name="taskProgress"
+                  id="completed"
+                  value="completed"
+                />
+                <label for="ongoing">Completed</label>
+              </section>
+              <section>
+                <label for="taskComment">Additional Comment: </label>
+                <input
+                  type="text"
+                  name="taskComment"
+                  id=""
+                  class="taskText"
+                  size="70"
+                  placeholder="Add additional comment"
+                />
+              </section>
+            </div>
+            <button class="submit">Submit</button>
+          </form>
+          <div class="output container" id="outputContainer"></div>
+        </div>
+
+    </main>
   </body>
 </html>
